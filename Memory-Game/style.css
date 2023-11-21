@@ -1,0 +1,55 @@
+/* already */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 300px;
+}
+
+/* mine */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(211, 211, 211);
+}
+
+.grid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading,
+h3 {
+  text-align: center;
+}
+
+#result {
+  color: rgb(137, 34, 34);
+  text-align: center;
+}
+/* confetti */
+.confetti i {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0.2rem;
+  animation-name: confetti;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: calc(60s / var(--speed));
+}
+
+.confetti i:nth-child(even) {
+  transform: rotate(90deg);
+}
+
+@keyframes confetti {
+  0% {
+    transform: translateY(-100vh);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
+}
